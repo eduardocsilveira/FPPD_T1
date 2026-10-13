@@ -1,0 +1,90 @@
+F0 pegou o garfo 0
+F3 pegou o garfo 3
+F1 pegou o garfo 1
+F2 pegou o garfo 2
+F4 pegou o garfo 4
+F4 esperando o garfo 0
+F3 esperando o garfo 4
+F0 esperando o garfo 1
+F1 esperando o garfo 2
+F2 esperando o garfo 3
+fatal error: all goroutines are asleep - deadlock!
+
+goroutine 1 [sync.WaitGroup.Wait]:
+sync.runtime_SemacquireWaitGroup(0x1044f42f0?, 0x60?)
+	runtime/sema.go:114 +0x38
+sync.(*WaitGroup).Wait(0x7e3c2af84020)
+	sync/waitgroup.go:206 +0xa4
+main.main()
+	filosofos/v1/main.go:46 +0xac
+
+goroutine 34 [sync.Mutex.Lock]:
+internal/sync.runtime_SemacquireMutex(0x17?, 0x50?, 0x2?)
+	runtime/sema.go:95 +0x28
+internal/sync.(*Mutex).lockSlow(0x1046247a8)
+	internal/sync/mutex.go:149 +0x174
+internal/sync.(*Mutex).Lock(...)
+	internal/sync/mutex.go:70
+sync.(*Mutex).Lock(...)
+	sync/mutex.go:46
+main.filosofo(0x0, 0x0?)
+	filosofos/v1/main.go:31 +0x244
+created by main.main in goroutine 1
+	filosofos/v1/main.go:44 +0x40
+
+goroutine 35 [sync.Mutex.Lock]:
+internal/sync.runtime_SemacquireMutex(0x17?, 0x50?, 0x2?)
+	runtime/sema.go:95 +0x28
+internal/sync.(*Mutex).lockSlow(0x1046247b0)
+	internal/sync/mutex.go:149 +0x174
+internal/sync.(*Mutex).Lock(...)
+	internal/sync/mutex.go:70
+sync.(*Mutex).Lock(...)
+	sync/mutex.go:46
+main.filosofo(0x1, 0x0?)
+	filosofos/v1/main.go:31 +0x244
+created by main.main in goroutine 1
+	filosofos/v1/main.go:44 +0x40
+
+goroutine 36 [sync.Mutex.Lock]:
+internal/sync.runtime_SemacquireMutex(0x17?, 0x50?, 0x2?)
+	runtime/sema.go:95 +0x28
+internal/sync.(*Mutex).lockSlow(0x1046247b8)
+	internal/sync/mutex.go:149 +0x174
+internal/sync.(*Mutex).Lock(...)
+	internal/sync/mutex.go:70
+sync.(*Mutex).Lock(...)
+	sync/mutex.go:46
+main.filosofo(0x2, 0x0?)
+	filosofos/v1/main.go:31 +0x244
+created by main.main in goroutine 1
+	filosofos/v1/main.go:44 +0x40
+
+goroutine 37 [sync.Mutex.Lock]:
+internal/sync.runtime_SemacquireMutex(0x17?, 0x50?, 0x2?)
+	runtime/sema.go:95 +0x28
+internal/sync.(*Mutex).lockSlow(0x1046247c0)
+	internal/sync/mutex.go:149 +0x174
+internal/sync.(*Mutex).Lock(...)
+	internal/sync/mutex.go:70
+sync.(*Mutex).Lock(...)
+	sync/mutex.go:46
+main.filosofo(0x3, 0x0?)
+	filosofos/v1/main.go:31 +0x244
+created by main.main in goroutine 1
+	filosofos/v1/main.go:44 +0x40
+
+goroutine 38 [sync.Mutex.Lock]:
+internal/sync.runtime_SemacquireMutex(0x17?, 0x50?, 0x2?)
+	runtime/sema.go:95 +0x28
+internal/sync.(*Mutex).lockSlow(0x1046247a0)
+	internal/sync/mutex.go:149 +0x174
+internal/sync.(*Mutex).Lock(...)
+	internal/sync/mutex.go:70
+sync.(*Mutex).Lock(...)
+	sync/mutex.go:46
+main.filosofo(0x4, 0x0?)
+	filosofos/v1/main.go:31 +0x244
+created by main.main in goroutine 1
+	filosofos/v1/main.go:44 +0x40
+exit status 2

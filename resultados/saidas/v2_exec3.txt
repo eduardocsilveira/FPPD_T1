@@ -1,0 +1,6 @@
+V2 - trava da mesa
+tempo total: 5.148013291s
+espera media: 149.320386ms
+maior espera: 204.742792ms
+max comendo juntos: 1
+ciclos por filosofo: [20 20 20 20 20]

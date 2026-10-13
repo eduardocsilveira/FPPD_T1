@@ -1,0 +1,6 @@
+V3 - ordem dos garfos
+tempo total: 2.751567667s
+espera media: 24.461398ms
+maior espera: 153.114333ms
+max comendo juntos: 2
+ciclos por filosofo: [20 20 20 20 20]
